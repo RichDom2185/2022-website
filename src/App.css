@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,39 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+:root {
+  --animation-duration: 0.1s;
+  --sidebar-background-color: #f5f5f5;
+  --sidebar-inactive-color: #454545;
+
+  --white: #fff;
+  --light-background-color: #fafafa;
+  --grey-outline: #bdbdbd;
+
+  --large-screen-width: 1200px;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.sidebar-target {
+  color: transparent;
+  text-shadow: 0 0 0 var(--sidebar-inactive-color);
+  transition: color var(--animation-duration) linear;
+}
+
+.sidebar-target-active,
+.sidebar-target:hover {
+  color: inherit;
+}
+
+.page-section:nth-child(odd) {
+  background-color: var(--white);
+}
+
+.page-section:nth-child(even) {
+  background-color: var(--light-background-color);
 }
